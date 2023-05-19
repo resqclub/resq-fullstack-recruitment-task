@@ -1,0 +1,17 @@
+{
+  "name": "@resqclub/fullstack-recruitment-task",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"yarn workspace @resqclub/frontend dev\" \"yarn workspace @resqclub/backend dev\"",
+    "lint-style": "prettier --check \"**/*.{ts,vue}\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "prettier": "^2.8.8"
+  }
+}
