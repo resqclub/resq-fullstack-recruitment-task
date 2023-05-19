@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import { createIdea, readIdeas } from './ideas';
+import { createIdea, generateRandomIdeaContent, readIdeas } from './ideas';
 import { readStats } from './stats';
 
 const app = express();
@@ -27,6 +27,12 @@ app.post('/ideas', (req, res) => {
 
 app.get('/stats', (req, res) => {
   res.json(readStats());
+});
+
+app.get('/random', (req, res) => {
+  res.json({
+    content: generateRandomIdeaContent(),
+  });
 });
 
 app.listen(port, () => {

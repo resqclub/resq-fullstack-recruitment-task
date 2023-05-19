@@ -1,15 +1,24 @@
 <script setup lang="ts">
-const formData = {
+import { reactive } from 'vue';
+
+const formData = reactive({
   submittedBy: '',
   content: '',
-};
+});
 
 type FormData = typeof formData;
 
-const emit = defineEmits<{
-	(e: 'submitIdea', formData: FormData): void;
-}>();
+const fillRandomIdea = async () => {
+  const { content } = await fetch('http://localhost:3000/random').then((res) =>
+    res.json()
+  );
 
+  formData.content = content;
+};
+
+const emit = defineEmits<{
+  (e: 'submitIdea', formData: FormData): void;
+}>();
 </script>
 
 <template>
@@ -24,7 +33,12 @@ const emit = defineEmits<{
       />
     </div>
     <div class="field">
-      <label for="content" class="label">Your idea</label>
+      <div class="labelButtonWrapper">
+        <label for="content" class="label">Your idea</label>
+        <button class="doItDorMeButton" @click.prevent="fillRandomIdea">
+          Write one for me
+        </button>
+      </div>
       <textarea
         type="text"
         name="content"
@@ -38,8 +52,8 @@ const emit = defineEmits<{
 
 <style scoped>
 .submit-idea-form {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
   width: 300px;
   border-bottom: 1px mintcream solid;
   padding: 20px;
@@ -60,5 +74,14 @@ const emit = defineEmits<{
 textarea {
   resize: none;
   min-height: 5lh;
+}
+
+.doItDorMeButton {
+  width: 120px !important;
+}
+
+.labelButtonWrapper {
+  display: flex;
+  gap: 5px;
 }
 </style>
