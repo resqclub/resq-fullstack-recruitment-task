@@ -31,14 +31,12 @@ In reality we always favour small PRs reviewed and merged quickly, but for this 
 
 Thankfully, you are not alone in developing this service. One of our developers has submitted some code for you to review. Their code is meant to close the following task from our work management system,
 
-```
-ResQ employees are not as creative as originally expected, and are struggling to come up with ideas. They would still like to be involved in the product development process however, and have asked for a button which would provide an auto-generated idea for them. This is a somewhat pointless feature, but the demand is very high and will buy us some goodwill to implement.
-
-We should implement the following,
-
-- Add a button to the idea submission form that fills the content box with some auto-generated text
-- The auto-generated text should describe a product idea or provide useful feedback on an existing feature
-```
+> ResQ employees are not as creative as originally expected, and are struggling to come up with ideas. They would still like to be involved in the product development process however, and have asked for a button which would provide an auto-generated idea for them. This is a somewhat pointless feature, but the demand is very high and will buy us some goodwill to implement.
+>
+> We should implement the following,
+>
+> - Add a button to the idea submission form that fills the > content box with some auto-generated text
+> - The auto-generated text should describe a product idea or provide useful feedback on an existing feature
 
 The implementation can be found in the branch `feature/awesome-thing`.
 
