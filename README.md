@@ -23,7 +23,7 @@ When a user submits a new idea to the platform, the idea is passed through valid
 
 It is up to you to design the UX and implementation in whatever way you see fit to fulfil these requirements. Feel free to change and refactor as much or as little of the codebase as you like. We are not necessarily expecting you to write perfect code as time is very limited for this assignment, but be ready to discuss your choices and what you might have done with more time.
 
-Please clone this repo and create a new git branch with your changes. Ideally you will create a private repo on GitHub and give [@elderfd](https://github.com/elderfd) sufficient permissions to view and add extra collaborators (so other members of the tech team can review). Again ideally, you would raise a PR from your branch to `main` as if this were a real piece of work. If, for some reason, you cannot submit your changes in the ideal way, please discuss with us.
+Please clone this repo and create a new git branch with your changes. Ideally you will create a private repo on GitHub and give [@resq-bot](https://github.com/resq-bot) sufficient permissions to view and add extra collaborators (so other members of the tech team can review). Again ideally, you would raise a PR from your branch to `main` as if this were a real piece of work. If, for some reason, you cannot submit your changes in the ideal way, please discuss with us.
 
 In reality we always favour small PRs reviewed and merged quickly, but for this assignment it is okay to make a larger PR with more changes that you would normally include at once.
 
